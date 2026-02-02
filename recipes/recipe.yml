@@ -21,10 +21,18 @@ modules:
     repos:
       copr:
         - atim/starship
+        - lukenukem/asus-linux/
     install:
       packages:
+        - adcli
+        - adw-gtk3-theme
+        - adwaita-fonts-all
         - android-tools
+        - asusctl
+        - bash-color-prompt
+        - bcache-tools
         - bcc
+        - bootc
         - bpftop
         - bpftrace
         - cascadia-code-fonts
@@ -36,74 +44,34 @@ modules:
         - cockpit-selinux
         - cockpit-storaged
         - cockpit-system
-        - dbus-x11
-        - edk2-ovmf
-        - flatpak-builder
-        - genisoimage
-        - git-subtree
-        - git-svn
-        - iotop
-        - libvirt
-        - libvirt-nss
-        - nicstat
-        - numactl
-        - osbuild-selinux
-        - p7zip
-        - p7zip-plugins
-        - podman-compose
-        - podman-machine
-        - podman-tui
-        - qemu
-        - qemu-char-spice
-        - qemu-device-display-virtio-gpu
-        - qemu-device-display-virtio-vga
-        - qemu-device-usb-redirect
-        - qemu-img
-        - qemu-system-x86-core
-        - qemu-user-binfmt
-        - qemu-user-static
-        - rocm-hip
-        - rocm-opencl
-        - rocm-smi
-        - sysprof
-        - incus
-        - incus-agent
-        - lxc
-        - tiptop
-        - trace-cmd
-        - udica
-        - util-linux-script
-        - virt-manager
-        - virt-v2v
-        - virt-viewer
-        - ydotool
-        - adcli
-        - adw-gtk3-theme
-        - adwaita-fonts-all
-        - bash-color-prompt
-        - bcache-tools
-        - bootc
-        - borgbackup
         - containerd
         - cryfs
         - davfs2
+        - dbus-x11
         - ddcutil
+        - edk2-ovmf
         - evtest
         - fastfetch
         - firewall-config
         - fish
+        - flatpak-builder
         - foo2zjs
         - fuse-encfs
         - gcc
+        - genisoimage
         - git-credential-libsecret
+        - git-subtree
+        - git-svn
         - glow
         - gnome-tweaks
         - gum
         - hplip
         - ibus-mozc
         - ifuse
-        - igt-gpu-tools
+        - incus
+        - incus-agent
         - input-remapper
+        - iotop
         - iwd
         - jetbrains-mono-fonts-all
         - just
@@ -113,41 +81,69 @@ modules:
         - libimobiledevice
         - libratbag-ratbagd
         - libsss_autofs
+        - libvirt
+        - libvirt-nss
         - libxcrypt-compat
         - lm_sensors
+        - lxc
         - make
         - mesa-libGLU
         - mozc
         - nautilus-gsconnect
+        - nicstat
+        - numactl
         - oddjob-mkhomedir
         - opendyslexic-fonts
         - openssh-askpass
+        - osbuild-selinux
+        - p7zip
+        - p7zip-plugins
+        - podman-compose
+        - podman-machine
+        - podman-tui
         - powerstat
         - powertop
         - printer-driver-brlaser
         - pulseaudio-utils
         - python3-pip
         - python3-pygit2
+        - qemu
+        - qemu-char-spice
+        - qemu-device-display-virtio-gpu
+        - qemu-device-display-virtio-vga
+        - qemu-device-usb-redirect
+        - qemu-img
+        - qemu-system-x86-core
+        - qemu-user-binfmt
+        - qemu-user-static
         - rclone
         - restic
+        - rocm-hip
+        - rocm-opencl
+        - rocm-smi
         - samba
         - samba-dcerpc
         - samba-ldb-ldap-modules
         - samba-winbind-clients
         - samba-winbind-modules
         - setools-console
-        - sssd-ad
-        - sssd-krb5
-        - sssd-nfs-idmap
-        - switcheroo-control
+        - sysprof
+        - tiptop
         - tmux
+        - trace-cmd
+        - udica
         - usbip
         - usbmuxd
+        - util-linux-script
+        - virt-manager
+        - virt-v2v
+        - virt-viewer
         - waypipe
         - wireguard-tools
         - wl-clipboard
         - xdg-terminal-exec
         - xprop
+        - ydotool
         - zenity
         - zsh
   - type: default-flatpaks
@@ -171,3 +167,4 @@ modules:
       - scope: user
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
+
