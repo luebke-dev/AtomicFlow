@@ -19,11 +19,20 @@ modules:
 
   - type: dnf
     repos:
+      files:
+        - https://download.docker.com/linux/fedora/docker-ce.repo
       copr:
         - atim/starship
         - lukenukem/asus-linux/
     install:
       packages:
+        - code
+        - containerd.io
+        - docker-buildx-plugin
+        - docker-ce
+        - docker-ce-cli
+        - docker-compose-plugin
+        - docker-model-plugin
         - adcli
         - adw-gtk3-theme
         - adwaita-fonts-all
@@ -165,6 +174,9 @@ modules:
           - com.moonlight_stream.Moonlight
           - org.videolan.VLC
       - scope: user
-
+  - type: systemd
+    enabled:
+      - docker.socket
+      - podman.socket
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
